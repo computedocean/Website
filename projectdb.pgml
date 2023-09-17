@@ -1,0 +1,21 @@
+<project>
+    <documents></documents>
+    <dmdesigns>
+        <dmdesign active>
+            <dmdesignskill skill="plainhtml.colors">
+                <dmcolor key="primary" color="#34527e"/>
+                <dmcolor key="secondary" color="rgb(143,40,4)"/>
+                <dmcolor key="color3" color="rgb(4,252,177)"/>
+                <dmcolor key="color4" color="rgb(177,4,252)"/>
+                <dmcolor key="white" color="white"/>
+                <dmcolor key="light" color="#f8f9fa"/>
+                <dmcolor key="dark" color="#212529"/>
+            </dmdesignskill>
+            <dmdesignskill skill="fonts" text_family="Dosis" text_weight="" text_color="" text_spacing="" text_effect="" text_italic="" text_smallcaps="" text_uppercase="" headings_family="Maven Pro" headings_weight="" headings_color="" headings_spacing="" headings_effect="" headings_italic="" headings_smallcaps="" headings_uppercase=""></dmdesignskill>
+            <dmdesignskill skill="headings" h1_family="" h2_family="" h1_weight="" h1_color="" h1_spacing="" h1_effect="" h1_italic="" h1_smallcaps="" h1_uppercase="" h2_weight="" h2_color="" h2_spacing="" h2_effect="" h2_italic="" h2_smallcaps="" h2_uppercase=""></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors="true" advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1682687982204-f1a77dcc3067?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2OTQ5MTU5ODJ8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max"></dmdesignskill>
+            <dmdesignskill skill="plainhtml" reset="true"></dmdesignskill>
+        </dmdesign>
+    </dmdesigns>
+    <dmlocked plainhtml-colors-primary="false" plainhtml-colors-secondary="false" plainhtml-colors-color3="false" plainhtml-colors-color4="false" plainhtml-colors-white="true" plainhtml-colors-light="true" plainhtml-colors-dark="true"></dmlocked>
+</project>
