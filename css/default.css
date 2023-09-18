@@ -109,7 +109,7 @@ video {
     vertical-align: baseline;
     background: transparent;
     text-transform: uppercase;
-    text-align: match-parent;
+    text-align: center;
 }
 
 article,
