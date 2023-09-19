@@ -39,7 +39,7 @@ div,
 span,
 object,
 iframe,
-h1,
+h1,
 h2,
 h3,
 h4,
@@ -48,11 +48,11 @@ h6,
 p,
 blockquote,
 pre,
-abbr,
+abbr,
 address,
 cite,
 code,
-del,
+del,
 dfn,
 em,
 img,
@@ -60,24 +60,24 @@ ins,
 kbd,
 q,
 samp,
-small,
+small,
 strong,
 sub,
 sup,
 var,
-b,
+b,
 i,
-dl,
+dl,
 dt,
 dd,
 ol,
 ul,
 li,
-fieldset,
+fieldset,
 form,
 label,
 legend,
-table,
+table,
 caption,
 tbody,
 tfoot,
@@ -85,20 +85,20 @@ thead,
 tr,
 th,
 td,
-article,
+article,
 aside,
 canvas,
 details,
 figcaption,
 figure,
-footer,
+footer,
 header,
 hgroup,
 menu,
 nav,
 section,
 summary,
-time,
+time,
 mark,
 audio,
 video {
@@ -110,8 +110,6 @@ video {
     background: transparent;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 0px;
-    text-indent: 2px;
 }
 
 article,
@@ -119,7 +117,7 @@ aside,
 details,
 figcaption,
 figure,
-footer,
+footer,
 header,
 hgroup,
 menu,
@@ -129,8 +127,8 @@ section {
 }
 
 audio,
-canvas,
-video {
+canvas,
+video {
     display: inline-block;
 }
 
@@ -164,7 +162,7 @@ q {
 
 blockquote:before,
 blockquote:after,
-q:before,
+q:before,
 q:after {
     content: '';
     content: none;
@@ -204,8 +202,8 @@ table {
 /* ------------------------------------------------------------------ */
 /* 1. Basic  ------------------------------------------------------- */
 *,
-*:before,
-*:after {
+*:before,
+*:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: 100%;
     box-sizing: border-box;
@@ -261,7 +259,7 @@ h1 {
 
 h2 {
     font-size: 28px;
-    line-height: 81px;
+    line-height: 36px;
     margin-bottom: 6px;
 }
 
@@ -285,12 +283,6 @@ h5 {
 h6 {
     font-size: 14px;
     line-height: 30px;
-}
-
-hr {
-    height: 5px;
-    border-width: 0;
-    background-color: #00A4BD;
 }
 
 .subheader {
@@ -363,7 +355,7 @@ blockquote cite:before {
 }
 
 blockquote cite a,
-blockquote cite a:visited {
+blockquote cite a:visited {
     color: #8B9798;
     border: none;
 }
@@ -384,7 +376,7 @@ blockquote cite a:visited {
 }
 
 .pull-quote:before,
-.pull-quote:after {
+.pull-quote:after {
     height: 1em;
     opacity: 0.45;
     position: absolute;
@@ -504,14 +496,14 @@ ul.disc {
 
 ul ul,
 ul ol,
-ol ol,
+ol ol,
 ol ul {
     margin: 6px 0 6px 30px;
 }
 
 ul ul li,
 ul ol li,
-ol ol li,
+ol ol li,
 ol ul li {
     margin-bottom: 6px;
 }
@@ -591,13 +583,13 @@ dd {
 
 /* Lining Definition Style Markup */
 .lining dt,
-.lining dd {
+.lining dd {
     display: inline;
     margin: 0;
 }
 
 .lining dt + dt:before,
-.lining dd + dt:before {
+.lining dd + dt:before {
     content: "\A";
     white-space: pre;
 }
@@ -668,13 +660,13 @@ dd {
 }
 
 .pagination .current,
-.pagination .current:hover {
+.pagination .current:hover {
     background-color: #11ABB0;
     color: #fff;
 }
 
 .pagination .inactive,
-.pagination .inactive:hover {
+.pagination .inactive:hover {
     background-color: #E6E8EB;
     color: #A9ADB2;
 }
@@ -699,11 +691,11 @@ img.pull-left {
 
 /* 6. Buttons  --------------------------------------------------------- */
 .button,
-.button:visited,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+.button:visited,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
     font: 16px/30px 'opensans-bold', sans-serif;
     background: #11ABB0;
     display: inline-block;
@@ -727,28 +719,28 @@ input[type="button"] {
 }
 
 .button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
     background: #3d4145;
     color: #fff;
 }
 
 .button:active,
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
     background: #3d4145;
     color: #fff;
 }
 
 .button.full-width,
-button.full-width,
-input[type="submit"].full-width,
-input[type="reset"].full-width,
-input[type="button"].full-width {
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
     width: 100%;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -757,7 +749,7 @@ input[type="button"].full-width {
 
 /* Fix for odd Mozilla border & padding issues */
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -772,10 +764,10 @@ fieldset {
 }
 
 input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
+input[type="password"],
+input[type="email"],
+textarea,
+select {
     display: block;
     padding: 18px 15px;
     margin: 0 0 24px 0;
@@ -794,9 +786,9 @@ select {
    width: 220px;
    } */
 input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
     color: #B3B7BC;
     background-color: #3d4145;
 }
@@ -806,7 +798,7 @@ textarea {
 }
 
 label,
-legend {
+legend {
     font: 16px/24px 'opensans-bold', sans-serif;
     margin: 12px 0;
     color: #3d4145;
@@ -814,13 +806,13 @@ legend {
 }
 
 label span,
-legend span {
+legend span {
     color: #8B9798;
     font: 14px/24px 'opensans-regular', sans-serif;
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"] {
     font-size: 15px;
     color: #737373;
 }
@@ -859,7 +851,7 @@ input[type="checkbox"] {
 
 /* row clearing */
 .row:before,
-.row:after {
+.row:after {
     content: " ";
     display: table;
 }
@@ -874,7 +866,6 @@ input[type="checkbox"] {
     padding: 0 20px;
     min-height: 1px;
     float: left;
-    text-indent: -85px;
 }
 
 .column.centered,
@@ -885,8 +876,8 @@ input[type="checkbox"] {
 
 /* removed gutters */
 .row.collapsed > .column,
-.row.collapsed > .columns,
-.column.collapsed,
+.row.collapsed > .columns,
+.column.collapsed,
 .columns.collapsed {
     padding: 0;
 }
@@ -1249,7 +1240,7 @@ properly.
     (http://nicolasgallagher.com/micro-clearfix-hack/
 --------------------------------------------------------------------- */
 .cf:before,
-.cf:after {
+.cf:after {
     content: " ";
     display: table;
 }
