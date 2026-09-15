@@ -12,6 +12,3 @@ Azure Resume Challenge. Put the function's URL in the `data-api` attribute of th
 `.visits` element in `index.html`; the endpoint should return JSON like
 `{"count": 1234}`. When the attribute is empty the line stays hidden.
 
-## To do
-
-- Replace the `#` LinkedIn links in `index.html` (two `TODO` comments) with the profile URL.
