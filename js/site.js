@@ -51,7 +51,7 @@
     .then(function (data) {
       var raw = data && data.count;
       var n = typeof raw === "number" ? raw : parseInt(String(raw || "").replace(/\D/g, ""), 10);
-      if (!isFinite(n)) return;
+      if (!isFinite(n) || n < 1) return; /* GoatCounter caches this total for up to 4h; stay hidden until it is non-zero */
       counter.textContent = n.toLocaleString();
       visits.hidden = false;
     })
