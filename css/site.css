@@ -404,13 +404,13 @@ time { font-family: var(--mono); font-size: 0.88em; }
   width: 1px;
   background: var(--line);
 }
-.timeline li {
+.timeline > li {
   position: relative;
   padding-bottom: 40px;
   max-width: 68ch;
 }
-.timeline li:last-child { padding-bottom: 0; }
-.timeline li::before {
+.timeline > li:last-child { padding-bottom: 0; }
+.timeline > li::before {
   content: "";
   position: absolute;
   left: -28px;
@@ -421,7 +421,7 @@ time { font-family: var(--mono); font-size: 0.88em; }
   background: var(--ground);
   border: 2px solid var(--dim);
 }
-.timeline li:first-child::before {
+.timeline > li:first-child::before {
   border-color: var(--accent);
   background: var(--accent);
   box-shadow: 0 0 0 4px var(--accent-soft);
@@ -437,6 +437,86 @@ time { font-family: var(--mono); font-size: 0.88em; }
   color: var(--muted);
   margin: 4px 0 12px;
 }
+
+/* --- Skills --- */
+.skills {
+  display: grid;
+  gap: 26px;
+  max-width: 72ch;
+}
+.skill-group h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li {
+  padding: 5px 11px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+/* --- Experience bullets --- */
+.bullets {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+}
+.bullets li {
+  position: relative;
+  padding-left: 18px;
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* --- Credentials --- */
+.cred-group {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-soft);
+  max-width: 72ch;
+}
+.cred-group h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.cred-list {
+  display: grid;
+  gap: 7px;
+}
+.cred-list li {
+  position: relative;
+  padding-left: 18px;
+}
+.cred-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+.edu { display: grid; gap: 2px; }
+.edu .where { margin: 0; }
 
 /* --- Projects --- */
 .project {
@@ -528,7 +608,8 @@ time { font-family: var(--mono); font-size: 0.88em; }
   body { font-size: 16px; }
   .nav-links { gap: 0; }
   .nav-links a { padding: 6px 8px; font-size: 14px; }
-  .nav-links li:nth-child(2) { display: none; } /* Certifications: reachable by scroll */
+  .nav-links li:nth-child(2),
+  .nav-links li:nth-child(4) { display: none; } /* Skills, Credentials: reachable by scroll */
   .about { grid-template-columns: 1fr; }
   .portrait { width: 96px; height: 96px; }
   .facts { grid-template-columns: 1fr 1fr; }
