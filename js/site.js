@@ -26,18 +26,32 @@
     sections.forEach(function (s) { observer.observe(s); });
   }
 
-  /* Visitor counter — only shown when an API URL is configured.
-     Expects JSON like {"count": 1234}; a bare number also works. */
+  /* Visitor counter via GoatCounter.
+     Reads the site code from .visits[data-goatcounter]; when it is empty
+     nothing is loaded and the line stays hidden. */
   var visits = document.querySelector(".visits");
   var counter = document.getElementById("counter");
-  var api = visits && visits.getAttribute("data-api");
-  if (!visits || !counter || !api) return;
+  var code = visits && (visits.getAttribute("data-goatcounter") || "").trim();
+  if (!visits || !counter || !code) return;
 
-  fetch(api)
+  var base = "https://" + code + ".goatcounter.com";
+
+  /* Record this pageview */
+  window.goatcounter = { endpoint: base + "/count" };
+  var tag = document.createElement("script");
+  tag.async = true;
+  tag.src = "https://gc.zgo.at/count.js";
+  tag.setAttribute("data-goatcounter", base + "/count");
+  document.head.appendChild(tag);
+
+  /* Show the running total. GoatCounter returns {"count": "1 234"} as a
+     string with thin spaces; needs "Allow adding visitor counts" enabled. */
+  fetch(base + "/counter/TOTAL.json")
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (data) {
-      var n = typeof data === "number" ? data : data && data.count;
-      if (typeof n !== "number") return;
+      var raw = data && data.count;
+      var n = typeof raw === "number" ? raw : parseInt(String(raw || "").replace(/\D/g, ""), 10);
+      if (!isFinite(n)) return;
       counter.textContent = n.toLocaleString();
       visits.hidden = false;
     })

@@ -66,7 +66,7 @@
           <span class="stack-status"><i aria-hidden="true"></i>live</span>
         </figcaption>
 
-        <svg class="stack-svg" viewBox="0 0 440 250" role="img" aria-label="Diagram: a browser requests the page through Azure CDN from Blob Storage, and calls an Azure Function that reads the visitor count from Cosmos DB.">
+        <svg class="stack-svg" viewBox="0 0 440 250" role="img" aria-label="Diagram: your browser loads this page from GitHub Pages, and GoatCounter records the visit.">
           <defs>
             <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M0,0 L8,4 L0,8 z" fill="currentColor"/>
@@ -75,10 +75,8 @@
 
           <!-- edges -->
           <g class="edges" fill="none" stroke="currentColor" stroke-width="1.25">
-            <path id="e1" d="M104,72 H160" marker-end="url(#arrow)"/>
-            <path id="e2" d="M296,72 H340" marker-end="url(#arrow)"/>
-            <path id="e3" d="M78,100 V152 Q78,178 104,178 H160" marker-end="url(#arrow)"/>
-            <path id="e4" d="M296,178 H340" marker-end="url(#arrow)"/>
+            <path id="e1" d="M104,72 H196" marker-end="url(#arrow)"/>
+            <path id="e2" d="M78,100 V152 Q78,178 104,178 H196" marker-end="url(#arrow)"/>
           </g>
 
           <!-- nodes -->
@@ -88,24 +86,14 @@
             <text x="58" y="84" text-anchor="middle">browser</text>
           </g>
           <g class="node">
-            <rect x="162" y="44" width="134" height="56" rx="6"/>
-            <text x="229" y="66" text-anchor="middle">Azure CDN</text>
-            <text x="229" y="84" text-anchor="middle" class="sub">static delivery</text>
-          </g>
-          <g class="node">
-            <rect x="342" y="44" width="86" height="56" rx="6"/>
-            <text x="385" y="66" text-anchor="middle">Blob</text>
-            <text x="385" y="84" text-anchor="middle" class="sub">this HTML</text>
-          </g>
-          <g class="node">
-            <rect x="162" y="150" width="134" height="56" rx="6"/>
-            <text x="229" y="172" text-anchor="middle">Azure Function</text>
-            <text x="229" y="190" text-anchor="middle" class="sub">HTTP trigger</text>
+            <rect x="198" y="44" width="230" height="56" rx="6"/>
+            <text x="313" y="66" text-anchor="middle">GitHub Pages</text>
+            <text x="313" y="84" text-anchor="middle" class="sub">this HTML, built from main</text>
           </g>
           <g class="node node-accent">
-            <rect x="342" y="150" width="86" height="56" rx="6"/>
-            <text x="385" y="172" text-anchor="middle">Cosmos DB</text>
-            <text x="385" y="190" text-anchor="middle" class="sub">visits</text>
+            <rect x="198" y="150" width="230" height="56" rx="6"/>
+            <text x="313" y="172" text-anchor="middle">GoatCounter</text>
+            <text x="313" y="190" text-anchor="middle" class="sub">records the visit, no cookies</text>
           </g>
 
           <!-- packets -->
@@ -113,11 +101,12 @@
           <circle class="packet p2" r="3.5"/>
 
           <!-- CI/CD footnote -->
-          <text x="12" y="238" class="footnote">deployed by GitHub Actions on push to main</text>
+          <text x="12" y="238" class="footnote">redeployed by GitHub Pages on every push to main</text>
         </svg>
 
-        <p class="visits" data-api="" hidden>
-          Visitor number <span id="counter">—</span>
+        <!-- Set data-goatcounter to your GoatCounter site code (the part before .goatcounter.com). -->
+        <p class="visits" data-goatcounter="" hidden>
+          <span id="counter">—</span> visits so far
         </p>
       </figure>
     </div>
@@ -328,13 +317,15 @@
           <p>
             A Cloud Guru's challenge caught my eye while I was studying for the
             AZ-900, and it turned out to be the right way to put everything I'd
-            learned into one working thing. You're looking at it.
+            learned into one working thing. The first version of this site was
+            built for it; today the page is served by GitHub Pages, but it
+            started here.
           </p>
           <ul class="project-parts">
-            <li><strong>Frontend</strong> — static HTML and CSS in Azure Blob Storage, delivered through Azure CDN.</li>
+            <li><strong>Frontend</strong> — static HTML and CSS hosted in Azure Blob Storage and delivered through Azure CDN.</li>
             <li><strong>Backend</strong> — a serverless HTTP-triggered Azure Function.</li>
-            <li><strong>Visitor counter</strong> — the Function reads and increments a count in Azure Cosmos DB.</li>
-            <li><strong>Delivery</strong> — GitHub Actions deploys on every push, with separate triggers for the frontend and backend.</li>
+            <li><strong>Visitor counter</strong> — the Function read and incremented a count stored in Azure Cosmos DB.</li>
+            <li><strong>Delivery</strong> — GitHub Actions deployed on every push, with separate triggers for the frontend and backend.</li>
           </ul>
           <p class="project-links">
             <a href="https://github.com/computedocean/Website" target="_blank" rel="noopener">Source on GitHub</a>

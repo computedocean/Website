@@ -272,8 +272,8 @@ time { font-family: var(--mono); font-size: 0.88em; }
   offset-rotate: 0deg;
   animation: travel 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
-.packet.p1 { offset-path: path("M104,72 H160 M162,72 H296 M296,72 H340"); }
-.packet.p2 { offset-path: path("M78,100 V152 Q78,178 104,178 H160 H296 H340"); animation-delay: 1.6s; }
+.packet.p1 { offset-path: path("M104,72 H196"); }
+.packet.p2 { offset-path: path("M78,100 V152 Q78,178 104,178 H196"); animation-delay: 1.6s; }
 @keyframes travel {
   0%   { offset-distance: 0%;   opacity: 0; }
   8%   { opacity: 1; }
